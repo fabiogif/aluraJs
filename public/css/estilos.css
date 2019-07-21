@@ -29,6 +29,15 @@
     display: none;
 }
 
+#erro {
+    color: #FA0000;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
 body {
     overflow: scroll;
 }
