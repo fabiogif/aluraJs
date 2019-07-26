@@ -38,6 +38,20 @@
     display: none;
 }
 
+#frase-id {
+    margin: 0 0 0 10px;
+    width: 40px;
+}
+
+#botao-sync {
+    float: right;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
+
 body {
     overflow: scroll;
 }

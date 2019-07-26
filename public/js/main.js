@@ -2,11 +2,12 @@ var tempoInicial = $("#tempo-digitacao").text();
 var campo = $(".campo-digitacao");
 
 $(function() {
-    atualizaTamanhoFrase();
-    inicializaContadores();
-    inicializaCronometro();
-    inicializaMarcadores();
-    $("#botao-reiniciar").click(reiniciaJogo);
+    atualizaTamanhoFrase()
+    inicializaContadores()
+    inicializaCronometro()
+    inicializaMarcadores()
+    $("#botao-reiniciar").click(reiniciaJogo)
+    autualizaPlacar()
 });
 
 function atualizaTempoInicial(tempo) {
@@ -16,7 +17,7 @@ function atualizaTempoInicial(tempo) {
 
 function atualizaTamanhoFrase() {
     var frase = $(".frase").text();
-    var numPalavras  = frase.split(" ").length;
+    var numPalavras = frase.split(" ").length;
     var tamanhoFrase = $("#tamanho-frase");
 
     tamanhoFrase.text(numPalavras);
@@ -53,14 +54,14 @@ function inicializaMarcadores() {
 function inicializaCronometro() {
     campo.one("focus", function() {
         var tempoRestante = $("#tempo-digitacao").text();
-    	var cronometroID = setInterval(function() {
-    		tempoRestante--;
-    		$("#tempo-digitacao").text(tempoRestante);
-    		if (tempoRestante < 1) {
+        var cronometroID = setInterval(function() {
+            tempoRestante--;
+            $("#tempo-digitacao").text(tempoRestante);
+            if (tempoRestante < 1) {
                 clearInterval(cronometroID);
                 finalizaJogo();
-    		}
-    	}, 1000);
+            }
+        }, 1000);
     });
 }
 
